@@ -1,1 +1,12 @@
 
+.darkmode{
+    background-color: #777;
+}
+
+.darkmode *{
+    color: white;
+}
+
+.darkmode button{
+    color: black;
+}
