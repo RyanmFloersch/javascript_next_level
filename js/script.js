@@ -63,14 +63,21 @@ function init() {
 
     button.addEventListener('click', toggleDarkMode);
 
-    var lis = document.querySelectorAll('li');
 
-    for (var li of lis) {
-                
-        li.addEventListener('click',function(){
-            console.log('li clicked');
-        });
-    }
+    ul.addEventListener('click',function(eventObj){
+        console.log(this);
+        console.log(eventObj.target.innerText);
+    });
+
+    // var lis = document.querySelectorAll('li');
+
+    // for (var li of lis) {
+    //     // event object represents all the information about the event that just occured
+    //     li.addEventListener('click',function(event){
+    //         console.log(event.target);
+    //         console.log(this);
+    //     });
+    // }
 
 
 
