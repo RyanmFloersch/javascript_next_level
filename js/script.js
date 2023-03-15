@@ -3,10 +3,11 @@
 var h1 = document.querySelector('h1');
 var button = document.querySelector('button');
 var body = document.body;
+var h3 = document.querySelector('h3');
+var ul = document.querySelector('ul');
 
 //Create a variable that trackes if dark mode is active
 var isDark = false;
-var h3 = document.querySelector("h3");
 var count = 5;
 
 
@@ -62,12 +63,42 @@ function init() {
 
     button.addEventListener('click', toggleDarkMode);
 
-    var bubbleDiv = document.querySelector(".bubble");
-    bubbleDiv.addEventListener('click',function(){
-       console.log('do I still work'); 
-    });
+    var lis = document.querySelectorAll('li');
+
+    for (var li of lis) {
+                
+        li.addEventListener('click',function(){
+            console.log('li clicked');
+        });
+    }
+
+
+
+// prevent Default example and propagation
+//     var bubbleDiv = document.querySelector(".bubble");
+//     bubbleDiv.addEventListener('click',function(){
+//        console.log('do I still work'); 
+//     });
+
+// var link = document.querySelector('#link');
+
+// link.addEventListener('click', function(obj){
+//     //Here it shows how preventDefault() 
+//     obj.preventDefault();
+//     window.location = 'https://github.com';
+//     console.log('wait! Link clicked');  
+    
+
+
+// });
+
+
+
 
 }
+
+
+
 
 init();
 

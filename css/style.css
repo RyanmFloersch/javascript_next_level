@@ -10,9 +10,12 @@
 }
 
 
+
 .main-styles {
     padding: 10%;
 }
+
+
 
 .splash{
     animation: colors 5s infinite alternate;
@@ -28,4 +31,10 @@
 
 .darkmode button {
     color: black;
+}
+
+
+#link{
+
+    
 }
