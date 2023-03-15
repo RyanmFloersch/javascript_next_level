@@ -1,12 +1,31 @@
+@keyframes colors {
+    from {
+        background: orange;
+    }
 
-.darkmode{
+
+    to {
+        background: blue;
+    }
+}
+
+
+.main-styles {
+    padding: 10%;
+}
+
+.splash{
+    animation: colors 5s infinite alternate;
+}
+
+.darkmode {
     background-color: #777;
 }
 
-.darkmode *{
+.darkmode * {
     color: white;
 }
 
-.darkmode button{
+.darkmode button {
     color: black;
 }
