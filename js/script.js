@@ -18,7 +18,11 @@ function setHeaderText() {
 //Togle between light mode and dark
 //If varaible is true, switch to light else switch to dark 
 
-function toggleDarkMode() {
+function toggleDarkMode( something) {
+    // something parameter was added for this example
+    // adding stopPropagatio() here stops the other button event from displaying as well. 
+    something.stopPropagation();
+
     if (isDark === false) {
         body.classList.add("darkmode");
         button.innerText = 'Light Mode';
@@ -36,7 +40,7 @@ function colorBlast() {
     body.classList.add('splash');
 }
 
-function countdown() {
+function startCountdown() {
 
     h3.innerText = "count " + count;
     var timer = setInterval(function () {
@@ -54,10 +58,32 @@ function countdown() {
 function init() {
 
     setHeaderText();
-    countdown();
+    startCountdown();
 
     button.addEventListener('click', toggleDarkMode);
+
+    var bubbleDiv = document.querySelector(".bubble");
+    bubbleDiv.addEventListener('click',function(){
+       console.log('do I still work'); 
+    });
 
 }
 
 init();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
